@@ -12,38 +12,27 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.model.JobRequest;
 import com.example.model.JobResult;
-import com.example.repository.JobResultRepository;
-import com.example.service.JobCacheService;
-import com.example.service.JobQueueService;
+import com.example.service.JobService;
 
 @RestController
 @RequestMapping("/api/job")
 public class JobController {
-
     @Autowired
-    private JobQueueService queueService;
-
-    @Autowired
-    private JobCacheService cacheService;
-
-    @Autowired
-    private JobResultRepository jobResultRepository;
+    private JobService jobService;
 
     @PostMapping
     public String submitJob(@RequestBody JobRequest jobRequest) {
-        queueService.enqueueJob(jobRequest);
+        jobService.enqueueJob(jobRequest);
         return "Job submitted successfully!";
     }
 
     @GetMapping("/{userId}")
     public String getLatestResult(@PathVariable String userId) {
-        // Get from Redis cache
-        String cachedResult = cacheService.getCachedResult(userId);
-        return cachedResult;
+        return jobService.getLatestResult(userId);
     }
 
     @GetMapping("/{userId}/history")
     public List<JobResult> getJobHistory(@PathVariable String userId) {
-        return jobResultRepository.findByUserId(userId);
+        return jobService.getJobHistory(userId);
     }
 }

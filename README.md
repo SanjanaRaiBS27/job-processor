@@ -74,6 +74,7 @@ The application uses the following default configuration:
 - Redis Host: localhost
 - Redis Port: 6379
 
+<<<<<<< HEAD
 ## Contributing
 
 1. Fork the repository
@@ -85,3 +86,6 @@ The application uses the following default configuration:
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details. 
+=======
+
+>>>>>>> 3bf01e5e2a940f92112f7767a307b31088865aa9

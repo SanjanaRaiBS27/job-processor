@@ -1,5 +1,7 @@
 /Users/sanjana/Desktop/job-processor/src/main/java/com/example/jobprocessor/config/WebConfig.java
 /Users/sanjana/Desktop/job-processor/src/main/java/com/example/model/JobResult.java
+/Users/sanjana/Desktop/job-processor/src/main/java/com/example/controller/HomeController.java
+/Users/sanjana/Desktop/job-processor/src/main/java/com/example/config/WebConfig.java
 /Users/sanjana/Desktop/job-processor/src/main/java/com/example/service/JobWorkerService.java
 /Users/sanjana/Desktop/job-processor/src/main/java/com/example/jobprocessor/controller/JobController.java
 /Users/sanjana/Desktop/job-processor/src/main/java/com/example/controller/JobController.java
